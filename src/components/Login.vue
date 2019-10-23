@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" v-if="show">
+    <b-form @submit="yGonSubmit" v-if="show">
 
-    <b-form-group id="input-group-1" label="Nom:" label-for="nom">
+    <b-form-group id="yg-input-group-1" label="Nom:" label-for="nom">
         <b-form-input
           id="nom"
           v-model="form.nom"
@@ -11,7 +11,7 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Prénom:" label-for="prenom">
+      <b-form-group id="yg-input-group-2" label="Prénom:" label-for="prenom">
         <b-form-input
           id="prenom"
           v-model="form.prenom"
@@ -20,7 +20,7 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Société:" label-for="societe">
+      <b-form-group id="yg-input-group-3" label="Société:" label-for="societe">
         <b-form-input
           id="societe"
           v-model="form.societe"
@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'YGLogin',
   data () {
     return {
       form: {
@@ -48,7 +48,7 @@ export default {
     }
   },
   methods: {
-    onSubmit (evt) {
+    yGonSubmit (evt) {
       evt.preventDefault()
       alert(JSON.stringify(this.form))
       this.$router.push('questionnaire')

@@ -1,13 +1,13 @@
 <template>
   <div class="questionnaire">
     <h1>This is an about page</h1>
-    <Questionnaire/>
+    <Questionnaire>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Questionnaire from '@/components/Questionnaire.vue'
+import YGQuestionnaire from '@/components/Questionnaire.vue'
 
 export default {
   name: 'questionnaire',
