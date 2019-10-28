@@ -1,6 +1,6 @@
 <template>
   <div class="reponses">
-    <YGReponses/>
+    <YGReponses :reponses=reponses />
   </div>
 </template>
 
@@ -9,6 +9,7 @@ import YGReponses from '@/components/Reponses.vue'
 
 export default {
   name: 'reponses',
+  props: ['reponses'],
   components: {
     YGReponses
   }

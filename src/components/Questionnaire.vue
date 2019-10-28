@@ -43,7 +43,6 @@ export default {
       evt.preventDefault()
       if (this.question < this.nbQuestions) {
         this.question += 1
-        console.log(this.$refs.reponses.selected)
       }
       if (this.question === this.nbQuestions) {
         this.fin = true
@@ -55,8 +54,12 @@ export default {
     end (evt) {
       evt.preventDefault()
       this.selected = YGQuestion.data
-      console.log(this.selected)
-      this.$router.push('reponses')
+      this.$router.push({
+        name: 'reponses',
+        params: {
+          'reponses': this.$refs.reponses.selected
+        }
+      })
     }
   }
 }

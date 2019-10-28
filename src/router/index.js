@@ -20,7 +20,8 @@ const routes = [
   {
     path: '/reponses',
     name: 'reponses',
-    component: Reponses
+    component: Reponses,
+    props: true
   }
 ]
 
