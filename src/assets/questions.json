@@ -27,7 +27,7 @@
       {
         "id": 3,
         "enonce": "Quel est le meilleur framework js pour faire du front ?",
-        "solution": [1],
+        "solutions": [1],
         "reponses": [
           "Vue.js",
           "React",
@@ -38,7 +38,7 @@
       {
         "id": 4,
         "enonce": "Lorsqu'un pancake tombe dans la neige avant le 31 décembre, on dit :",
-        "solution": [3],
+        "solutions": [3],
         "reponses": [
           "Que c'est un pancake qui est tombé dans la neige avant le 31 décembre",
           "Que c'est une Kipa surgelée",
@@ -49,7 +49,7 @@
       {
         "id": 5,
         "enonce": "Pourquoi les chaussures de sécurité sont-elles obligatoires ?",
-        "solution": [0,3],
+        "solutions": [0,3],
         "reponses": [
           "L'écrasement des orteils",
           "La pluie",
