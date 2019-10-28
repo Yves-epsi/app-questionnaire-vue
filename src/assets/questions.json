@@ -1,8 +1,10 @@
 {
     "nom": "Questionnaire pour EEV SAS",
     "description": "Questionnaire fait a la main pas trouvé sur internet",
+    "nbQuestions": 5,
     "questions": [
       {
+        "id": 1,
         "enonce": "Est-il réellement utile de devoir fair un questionnaire en json à la main ?",
         "solutions": [1],
         "reponses": [
@@ -13,6 +15,7 @@
         ]
       },
       {
+        "id": 2,
         "enonce": "Mettre ses initiales devant chaque variables permet : ",
         "solutions": [0,2],
         "reponses": [
@@ -22,6 +25,7 @@
         ]
       },
       {
+        "id": 3,
         "enonce": "Quel est le meilleur framework js pour faire du front ?",
         "solution": [1],
         "reponses": [
@@ -32,6 +36,7 @@
         ]
       },
       {
+        "id": 4,
         "enonce": "Lorsqu'un pancake tombe dans la neige avant le 31 décembre, on dit :",
         "solution": [3],
         "reponses": [
@@ -42,6 +47,7 @@
         ]
       },
       {
+        "id": 5,
         "enonce": "Pourquoi les chaussures de sécurité sont-elles obligatoires ?",
         "solution": [0,3],
         "reponses": [
