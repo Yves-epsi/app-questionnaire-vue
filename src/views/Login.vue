@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Login/>
+    <YGLogin/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import YGLogin from '@/components/Login.vue'
 export default {
   name: 'home',
   components: {
-    Login
+    YGLogin
   }
 }
 </script>

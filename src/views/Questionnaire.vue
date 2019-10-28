@@ -1,7 +1,7 @@
 <template>
   <div class="questionnaire">
     <h1>This is an about page</h1>
-    <Questionnaire>
+    <YGQuestionnaire/>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import YGQuestionnaire from '@/components/Questionnaire.vue'
 export default {
   name: 'questionnaire',
   components: {
-    Questionnaire
+    YGQuestionnaire
   }
 }
 </script>

@@ -1,24 +1,20 @@
-# app-questionnaire-vue
+23/10
 
-## Project setup
-```
-npm install
-```
+Création et déployement de l'application 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Intégration de bootstrap-vue
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Création de la page login
 
-### Lints and fixes files
-```
-npm run lint
-```
+Création du questionnaire json
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+28/10
+
+Objectifs :
+
+Installation pouchdb
+
+Réalisation du questionnaire
+
+Accès administrateur
