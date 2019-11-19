@@ -14,7 +14,7 @@ export default {
   name: 'YGQuestion',
   data () {
     return {
-      selected: []
+      selected: [] // Array des réponses séléctionées
     }
   },
   props: {
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     question () {
-      return questions.questions[this.questionNumber]
+      return questions.questions[this.questionNumber] // Retourne la question voulue
     }
   }
 }

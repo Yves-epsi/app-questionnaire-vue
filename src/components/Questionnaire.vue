@@ -30,7 +30,7 @@ export default {
     YGQuestion
   },
   created () {
-    for (var i = 0; i <= this.nbQuestions; i++) {
+    for (var i = 0; i <= this.nbQuestions; i++) { // Genere une liste qui contient les indexs de questions dans un ordre aléatoire
       let numeroQuestion
       do {
         numeroQuestion = Math.floor(Math.random() * (this.nbQuestions + 1))
@@ -39,7 +39,7 @@ export default {
     }
   },
   methods: {
-    previous (evt) {
+    previous (evt) { // Méthode qui passe a la question suivante
       evt.preventDefault()
       this.numero -= 1
       if (this.numero === 0) {
@@ -49,7 +49,7 @@ export default {
         this.fin = false
       }
     },
-    next (evt) {
+    next (evt) { // Méthode qui passe a la question précédente
       evt.preventDefault()
       if (this.numero < this.nbQuestions) {
         this.numero += 1
@@ -61,7 +61,7 @@ export default {
         this.disable = false
       }
     },
-    end (evt) {
+    end (evt) { // Méthode qui envoie vers la page des réponses
       evt.preventDefault()
       this.selected = YGQuestion.data
       this.$router.push({

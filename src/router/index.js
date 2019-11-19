@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
 import Questionnaire from '../views/Questionnaire.vue'
 import Reponses from '../views/Reponses.vue'
+import Admin from '../views/Admin.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,12 @@ const routes = [
     path: '/reponses',
     name: 'reponses',
     component: Reponses,
+    props: true
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: Admin,
     props: true
   }
 ]

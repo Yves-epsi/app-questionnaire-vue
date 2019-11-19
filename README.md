@@ -18,3 +18,10 @@ Installation pouchdb
 Réalisation du questionnaire
 
 Accès administrateur
+
+
+19/11
+
+Ajout de la base de donnée
+
+Questions aléatoire + choix du nombre de questions

@@ -17,7 +17,7 @@
       </b-form-checkbox-group>
     </b-form-group>
 </div>
-<b-button variant="primary" :click="retourAcceuil">Retourner à la page d'acceuil</b-button>
+<b-button variant="primary" @click="retourAcceuil">Retourner à la page d'acceuil</b-button>
 </div>
 </template>
 
@@ -25,7 +25,7 @@
 import questions from '../assets/questions.json'
 import PouchDB from 'pouchdb'
 
-var db = new PouchDB('users') // créer la bdd
+var db = new PouchDB('users')
 
 export default {
   name: 'YGREponses',
@@ -45,20 +45,20 @@ export default {
     }
   },
   created () {
-    db.replicate.to('http://localhost:5984/app-questionnaire-vue') // adresse ma BDD
-    this.questions.forEach(element => {
+    db.replicate.to('http://localhost:5984/app-questionnaire-vue')
+    this.questions.forEach(element => { // Ajoute les solutions à la liste des bonnes réponses
       element.solutions.forEach(reponse => {
         this.bonnesReponses.push(element.reponses[reponse])
       })
     })
-    this.reponses.forEach(element => {
+    this.reponses.forEach(element => { // Calcul du score
       if (this.bonnesReponses.includes(element)) {
         this.score += 1
       } else {
         this.score -= 0.5
       }
     })
-    db.put({
+    db.put({ // Mise du résultat en base
       _id: new Date(),
       nom: this.infos.nom,
       prenom: this.infos.prenom,
@@ -69,19 +69,19 @@ export default {
     })
   },
   methods: {
-    bonne (value) {
+    bonne (value) { // Retourne si c'est une bonne réponse
       if (this.bonnesReponses.includes(value)) {
         return true
       } else {
         return false
       }
     },
-    retourAcceuil () {
+    retourAcceuil () { // Retour à l'acceuil
       this.$router.push({ name: 'login' })
     }
   },
   computed: {
-    questions () {
+    questions () { // Récupère les questions du fichier Json
       return questions.questions
     }
   }
