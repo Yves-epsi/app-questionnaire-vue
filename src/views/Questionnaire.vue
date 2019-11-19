@@ -1,6 +1,6 @@
 <template>
   <div class="questionnaire">
-    <YGQuestionnaire/>
+    <YGQuestionnaire :infos=infos />
   </div>
 </template>
 
@@ -10,6 +10,7 @@ import YGQuestionnaire from '@/components/Questionnaire.vue'
 
 export default {
   name: 'questionnaire',
+  props: ['infos'],
   components: {
     YGQuestionnaire
   }

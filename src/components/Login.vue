@@ -29,12 +29,20 @@
         ></b-form-input>
       </b-form-group>
 
+      <div>
+        <label for="range-1">Nombre de questions</label>
+        <b-form-input id="range-1" v-model="form.questions" type="range" min="2" :max=nbQuestions></b-form-input>
+        <div class="mt-2">Nombre de questions: {{ form.questions }}</div>
+      </div>
+
       <b-button type="submit" variant="primary">Commencer le test</b-button>
     </b-form>
   </div>
 </template>
 
 <script>
+import questions from '../assets/questions.json'
+
 export default {
   name: 'YGLogin',
   data () {
@@ -42,16 +50,21 @@ export default {
       form: {
         nom: '',
         prenom: '',
-        societe: ''
+        societe: '',
+        questions: 5
       },
       show: true
+    }
+  },
+  computed: {
+    nbQuestions () {
+      return questions.nbQuestions
     }
   },
   methods: {
     yGonSubmit (evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
-      this.$router.push('questionnaire')
+      this.$router.push({ name: 'questionnaire', params: { 'infos': this.form } })
     }
   }
 }
