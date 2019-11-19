@@ -1,12 +1,23 @@
 <template>
   <div>
       <h1>Interface Admin</h1>
-      <!--<b-table striped hover :items="docs" v-if="!isFetching"></b-table>-->
-      <div v-if="!isFetching">yo<p v-for="doc in docs" :key="doc.id"> {{docs}}</p></div>
-      <div v-if="isFetching"><p>{{docs}}</p></div>
+      <b-container>
+          <b-row>
+            <b-col>Nom</b-col>
+            <b-col>Prenom</b-col>
+            <b-col>Société</b-col>
+            <b-col>Score</b-col>
+        </b-row>
+        <b-row v-for="doc in docs" :key="doc.id">
+            <b-col>{{doc.doc.nom}}</b-col>
+            <b-col>{{doc.doc.prenom}}</b-col>
+            <b-col>{{doc.doc.societe}}</b-col>
+            <b-col>{{doc.doc.score}}</b-col>
+        </b-row>
+        </b-container>
+        <b-button variant="primary" @click="retourAcceuil">Retourner à la page d'acceuil</b-button>
   </div>
 </template>
-
 <script>
 import PouchDB from 'pouchdb'
 
@@ -16,24 +27,26 @@ export default {
   name: 'YGAdmin',
   data () {
     return {
-      docs: [],
-      isFetching: true
+      docs: []
     }
   },
   created () {
     this.isFetching = this.getAll()
   },
   methods: {
-    getAll () {
-      this.docs = db.allDocs({
+    getAll () { // Recupération des scores
+      let res = this
+      db.allDocs({
         include_docs: true,
         attachments: true
       }).then(function (result) {
-        return result.rows
+        res.docs = result.rows
       }).catch(function (err) {
         console.log(err)
       })
-      return false
+    },
+    retourAcceuil () { // Retour à l'acceuil
+      this.$router.push({ name: 'login' })
     }
   }
 }

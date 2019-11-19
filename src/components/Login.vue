@@ -91,6 +91,14 @@ export default {
       }
     }
   },
+  created () {
+    db.put({
+      _id: 'admin',
+      password: 'admin'
+    }).catch(function (err) {
+      console.log(err)
+    })
+  },
   computed: {
     nbQuestions () {
       return questions.nbQuestions // Retourne le nombre de question dans le Json

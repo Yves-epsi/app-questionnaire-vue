@@ -1,3 +1,7 @@
+Déploiement : 
+
+Mot de passe pour l'admin : login: 'admin' et password: 'admin'
+
 23/10
 
 Création et déployement de l'application 
@@ -25,3 +29,5 @@ Accès administrateur
 Ajout de la base de donnée
 
 Questions aléatoire + choix du nombre de questions
+
+Interface Admin
