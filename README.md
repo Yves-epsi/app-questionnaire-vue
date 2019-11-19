@@ -1,4 +1,4 @@
-Déploiement : 
+Déploiement : https://yves-epsi.github.io
 
 Mot de passe pour l'admin : login: 'admin' et password: 'admin'
 
